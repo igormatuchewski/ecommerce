@@ -1,7 +1,7 @@
 /* 
- <><><> QUEST√O 1 <><><>
+ <><><> QUEST√ÉO 1 <><><>
 
- => 1.1 Qual È a diferenÁa mÈdia entre data estimada de entrega e a data real de entrega dos pedidos?
+ => 1.1 Qual √© a diferen√ßa m√©dia entre data estimada de entrega e a data real de entrega dos pedidos?
 
 Criando uma coluna para calcular quantos dias o pedido atrasou ou chegou antes do prazo */
 ALTER TABLE dim_Orders
@@ -16,12 +16,12 @@ FROM dim_Orders;
 SELECT AVG(DifDias) as Media
 FROM dim_Orders
 
-/* Verifiquei que, em mÈdia, os produtos s„o entregues 12 dias antes do prazo estimado */
+/* Verifiquei que, em m√©dia, os produtos s√£o entregues 12 dias antes do prazo estimado */
 
 /* 
- => 1.2 Qual È a porcentagem de pedidos entregues antes, no prazo e apÛs a data estimada?
+ => 1.2 Qual √© a porcentagem de pedidos entregues antes, no prazo e ap√≥s a data estimada?
 
-Para isso irei criar outra coluna que ir· me retornar se o pedido foi entregue antes, no prazo ou apÛs o prazo */
+Para isso irei criar outra coluna que ir√° me retornar se o pedido foi entregue antes, no prazo ou ap√≥s o prazo */
 ALTER TABLE dim_Orders
 ADD SituacaoEntrega VARCHAR(20)
 
@@ -32,7 +32,7 @@ SET SituacaoEntrega = CASE
 						WHEN DifDias > 0 THEN 'Antes do Prazo'
 					   END;
 
-/* Criada a coluna, irei verificar a quantidade total de ordens e a quantidade em cada SituaÁ„o e, logo apÛs, a porcentagem de cada Situacao */
+/* Criada a coluna, irei verificar a quantidade total de ordens e a quantidade em cada Situa√ß√£o e, logo ap√≥s, a porcentagem de cada Situacao */
 
 SELECT COUNT (*) AS qtdOrdens
 FROM dim_Orders
@@ -69,7 +69,7 @@ FROM dim_Orders
 
 
 /* 
- <><><> QUEST√O 2 <><><>
+ <><><> QUEST√ÉO 2 <><><>
 
  => 2.1 Quais vendedores possuem a maior taxa de pedidos cancelados ou devolvidos?
 
@@ -100,7 +100,7 @@ FROM Cancelados AS c
 CROSS JOIN TotalCancelados AS t
 ORDER BY percCancelados DESC;
 
-/* ExplicaÁ„o
+/* Explica√ß√£o
 WITH TotalCancelados AS (...):
 
 Calcula o total geral de pedidos cancelados.
@@ -109,7 +109,7 @@ WITH CanceladosPorVendedor AS (...):
 Calcula o total de pedidos cancelados por vendedor.
 SELECT c.seller_id, COALESCE(100.0 * c.qtdCancelados / t.total_cancelados, 0) AS pctCancelados:
 
-Calcula a porcentagem de pedidos cancelados por vendedor em relaÁ„o ao total geral de pedidos cancelados.
+Calcula a porcentagem de pedidos cancelados por vendedor em rela√ß√£o ao total geral de pedidos cancelados.
 COALESCE(..., 0): Garante que a porcentagem seja 0 se o total de pedidos cancelados for 0.
 CROSS JOIN TotalCancelados AS t:
 
@@ -147,13 +147,13 @@ FROM NoPrazoPorVendedor as np
 CROSS JOIN TotalPedidos as t
 ORDER BY percNoPrazo DESC;
 
-/* Com isso, È possÌvel verificar os 10 vendedores que possuem a melhor % de entregas no prazo ou antes do prazo */
+/* Com isso, √© poss√≠vel verificar os 10 vendedores que possuem a melhor % de entregas no prazo ou antes do prazo */
 
 /*
- <><><> QUEST√O 3 <><><>
- => 3.1 Qual È a distribuiÁ„o geogr·fica dos clientes em termos de volume de pedidos e valor gasto?
+ <><><> QUEST√ÉO 3 <><><>
+ => 3.1 Qual √© a distribui√ß√£o geogr√°fica dos clientes em termos de volume de pedidos e valor gasto?
 
- Primeiro irei a distribuiÁ„o geogr·fica em quantidade de pedidos
+ Primeiro irei a distribui√ß√£o geogr√°fica em quantidade de pedidos
  */
 
  SELECT ct.customer_state, COUNT(od.order_id) AS qtdPedidos
@@ -176,7 +176,7 @@ ORDER BY percNoPrazo DESC;
 
 
  /*
- <><><> QUEST√O 4 <><><>
+ <><><> QUEST√ÉO 4 <><><>
  => 4.1 Quais categorias de produtos geram mais receita e quais tem a maior taxa de cancelamento?
 
  Primeiro vou verificar as 10 categorias que geram mais receita
@@ -203,10 +203,10 @@ ORDER BY qtdCancelamento DESC;
 
 
  /*
- <><><> QUEST√O 5 <><><>
- => 5.1 Qual È o mÈtodo de pagamento mais utilizado e qual traz maior receita?
+ <><><> QUEST√ÉO 5 <><><>
+ => 5.1 Qual √© o m√©todo de pagamento mais utilizado e qual traz maior receita?
 
- Primeiro vou analisar o mÈtodo de pagamento mais utilizado.
+ Primeiro vou analisar o m√©todo de pagamento mais utilizado.
  */
 
 SELECT py.payment_type, COUNT(od.order_id) AS qtdPgto
@@ -227,7 +227,7 @@ ON py.order_id = od.order_id
 GROUP BY py.payment_type
 ORDER BY receita DESC;
 
- /* => 5.2 Como est· distribuÌdo o n˙mero de parcelas escolhidas pelos clientes para pagamentos a prazo?
+ /* => 5.2 Como est√° distribu√≠do o n√∫mero de parcelas escolhidas pelos clientes para pagamentos a prazo?
  */
 
  SELECT payment_sequential, COUNT(payment_sequential) AS qtd
