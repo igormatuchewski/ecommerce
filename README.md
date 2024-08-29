@@ -49,7 +49,8 @@ Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve
 
 ## 3. Conclusões com base nas Perguntas Iniciais:
 
-* Você pode verificar o relatório gerado em Word (.docx) clicando no link: [Relatório.docx](https://github.com/user-attachments/files/16790287/Relatorio.docx)
+* Você pode verificar o relatório gerado em Word (.docx) clicando no link: [Relatório.docx](https://github.com/user-attachments/files/16805803/Relatorio.docx)
+
 
 ## 4. Dashboard
 
