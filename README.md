@@ -3,6 +3,8 @@ Este projeto consiste em uma análise exploratória, resposta de perguntas e des
 
 Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve análise das bases de dados, desenvolvi um prompt e solicitei que ele gerasse perguntas de negócio se colocando em um cargo de Gestor/Gerente e eu como um Analista de Dados. Com isso, ele gerou perguntas relevantes com base no dataset e eu já com a experiência que tenho trabalhando com dados adaptei o que foi necessário.
 
+## 2. Dataset e Projeto
+
 1.1 Fonte do dataset:
 * [Ecommerce Order & Supply Chain Dataset](https://www.kaggle.com/datasets/bytadit/ecommerce-order-dataset)
 
