@@ -21,7 +21,7 @@ Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve
 * Pré análise dos dados dispostos em cada base e desenvolvimento de um diagrama para auxiliar na modelagem e entendimento dos dados. Veja o diagrama [aqui](https://github.com/user-attachments/assets/2983ae11-912d-48b6-a829-3cb60fb75969)!
 * Simulando um cenário corporativo em que exista um banco de dados, importei todos os arquivos baixados do Kaggle para o SSMS, realizei alguns tratamentos em SQL e após isso as queries para responder as perguntas de negócio.
 * Após isso, conectei o banco de dados ao PowerBI para desenvolver as visualizações e, conforme o dashboard ia sendo montado, algumas alterações foram feitas diretamente no Power Query via Linguagem M.
-* Para cálculos no PowerBI foi utilizado DAX.
+* Para cálculos no PowerBI foi utilizado DAX e Linguagem M.
 
 1.4 Análise e Visualização:
 * As análises inicialmente foram feitas diretamente no SSMS a fim de responder as perguntas inciais do Gestor (IA) e entender a composição dos dados. Foram indentificados também alguns Outliers e isso foi destacado no relatório que foi gerado para o Gestor (IA), o relatório está disponível mais abaixo.
