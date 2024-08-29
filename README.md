@@ -7,15 +7,22 @@ Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve
 * [Ecommerce Order & Supply Chain Dataset](https://www.kaggle.com/datasets/bytadit/ecommerce-order-dataset)
 
 1.2 Ferramentas Utilizadas:
-* SQL Server Management Studio, Excel, Power Query, PowerBI e Figma.
+* SQL Server Management Studio;
+* Miro;
+* Microsoft Excel;
+* Microsoft Word;
+* Power Query;
+* PowerBI;
+* Figma.
 
 1.3 Estrutura do Projeto
-* Pré análise dos dados dispostos em cada base e desenvolvimento de um diagrama para auxiliar na modelagem e entendimento dos dados.
+* Pré análise dos dados dispostos em cada base e desenvolvimento de um diagrama para auxiliar na modelagem e entendimento dos dados. Veja o diagrama [aqui](https://github.com/user-attachments/assets/2983ae11-912d-48b6-a829-3cb60fb75969)!
 * Simulando um cenário corporativo em que exista um banco de dados, importei todos os arquivos baixados do Kaggle para o SSMS, realizei alguns tratamentos em SQL e após isso as queries para responder as perguntas de negócio.
 * Após isso, conectei o banco de dados ao PowerBI para desenvolver as visualizações e, conforme o dashboard ia sendo montado, algumas alterações foram feitas diretamente no Power Query via Linguagem M.
 * Para cálculos no PowerBI foi utilizado DAX.
 
 1.4 Análise e Visualização:
+* As análises inicialmente foram feitas diretamente no SSMS a fim de responder as perguntas inciais do Gestor (IA) e entender a composição dos dados. Foram indentificados também alguns Outliers e isso foi destacado no relatório que foi gerado para o Gestor (IA), o relatório está disponível mais abaixo.
 * Desenvolvimento de gráficos interativos para auxiliar nas análises e a responder às perguntas de negócio. Como sugestão do Gestor (IA), foi desenvolvido um dashboard via PowerBI para gerar gráficos dinâmicos.
 * Exploração dos dados com foco em insights que auxiliem a identificar pontos críticos e em tomadas de decisões.
 * Layout desenvolvido via ferramenta Figma.
@@ -42,4 +49,36 @@ Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve
 
 ## 3. Conclusões com base nas Perguntas Iniciais:
 
-[Relatório.docx](https://github.com/user-attachments/files/16790020/Relatorio.docx)
+* Você pode verificar o relatório gerado em Word (.docx) clicando no link: [Relatório.docx](https://github.com/user-attachments/files/16790287/Relatorio.docx)
+
+## 4. Dashboard
+
+* Além de simplesmente responder as perguntas, o Gestor (IA) solicitou o desenvolvimento de um dashboard com algumas visualizações que ele gostaria de ter:
+
+4.1 Visão Geral dos Pedidos:
+
+* Gráficos que mostrem o status dos pedidos, tempo médio de entrega, e um resumo de pedidos atrasados versus entregues no prazo.
+
+4.2 Performance dos Vendedores:
+
+* Gráficos de barras comparando a performance dos vendedores em termos de prazos de entrega e taxas de cancelamento.
+
+4.3 Análise de Clientes:
+
+* Mapas de calor ou gráficos geográficos mostrando a distribuição de clientes e o volume de pedidos por região.
+* Análise de correlação entre métodos de pagamento e valores dos pedidos.
+
+4.4 Produtos e Categorias:
+
+* Gráficos de pizza ou barras mostrando a receita por categoria e a taxa de devolução por categoria.
+* Gráficos de dispersão correlacionando as dimensões/peso dos produtos com os custos de envio.
+
+4.5 Detalhamento dos Pagamentos:
+
+* Gráficos que mostrem a distribuição de métodos de pagamento e a receita correspondente.
+
+## 4.6 Visualização do Dashboard
+
+* No dashboard, desenvolvi outros gráficos além dos solicitados, expandindo assim a quantidade de análises, possibilidades de insights e tomadas rápidas de decisão analisando os gráficos dinamicamente.
+* Como não é possível visualizar um arquivo do PowerBI aqui pelo GitHub, acesse clicando [aqui](https://encurtador.com.br/IySV1).
+
