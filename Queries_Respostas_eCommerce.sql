@@ -100,27 +100,6 @@ FROM Cancelados AS c
 CROSS JOIN TotalCancelados AS t
 ORDER BY percCancelados DESC;
 
-/* Explicação
-WITH TotalCancelados AS (...):
-
-Calcula o total geral de pedidos cancelados.
-WITH CanceladosPorVendedor AS (...):
-
-Calcula o total de pedidos cancelados por vendedor.
-SELECT c.seller_id, COALESCE(100.0 * c.qtdCancelados / t.total_cancelados, 0) AS pctCancelados:
-
-Calcula a porcentagem de pedidos cancelados por vendedor em relação ao total geral de pedidos cancelados.
-COALESCE(..., 0): Garante que a porcentagem seja 0 se o total de pedidos cancelados for 0.
-CROSS JOIN TotalCancelados AS t:
-
-Combina os resultados da contagem de cancelamentos por vendedor com o total geral de cancelamentos.
-ORDER BY pctCancelados DESC:
-
-Ordena os resultados pela porcentagem de pedidos cancelados em ordem decrescente.
-
-
-Com isso temos os 10 vendedores com mais taxa de cancelamentos */
-
 /*
  => 2.2 Quais vendedores tem a melhor taxa de cumprimento de prazos de entrega?
  */
