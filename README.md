@@ -1,5 +1,5 @@
 # Análise de Dados - eCommerce
-Este projeto consiste em uma análise exploratória, resposta de perguntas e desenvolvimento de um BI utilizando um dataset fictício de um eCommerce. O objetivo é responder as perguntas de negócio referentes à Prazos, Custos, Performance de Vendedores, Clientes e Pagamentos.
+Este projeto consiste em análise exploratória, resposta de perguntas e desenvolvimento de um BI utilizando um dataset fictício de um eCommerce. O objetivo é responder as perguntas de negócio referentes à Prazos, Custos, Performance de Vendedores, Clientes e Pagamentos.
 
 Como apoio neste projeto utilizei uma ferramenta de IA, o ChatGPT. Fiz uma breve análise das bases de dados, desenvolvi um prompt e solicitei que ele gerasse perguntas de negócio se colocando em um cargo de Gestor/Gerente e eu como um Analista de Dados. Com isso, ele gerou perguntas relevantes com base no dataset e eu já com a experiência que tenho trabalhando com dados adaptei o que foi necessário.
 
